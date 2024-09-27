@@ -39,6 +39,16 @@ ALTER TABLE employee_master
 	ON UPDATE RESTRICT
 	ON DELETE RESTRICT
 ;
+/* Insert employee_master Data*/
+insert into employee_master values('0001','佐藤','2015/04/01',0,'100');
+insert into employee_master values('0002','小林','2016/04/01',0,'200');
+insert into employee_master values('0003','高橋','2018/06/01',1,'100');
+insert into employee_master values('0004','吉田','2019/04/01',0,'100');
+insert into employee_master values('0005','元木','2020/04/01',0,'200');
+
+/* Insert department_master Data*/
+insert into department_master values('100','技術');
+insert into department_master values('200','営業');
 
 
 
