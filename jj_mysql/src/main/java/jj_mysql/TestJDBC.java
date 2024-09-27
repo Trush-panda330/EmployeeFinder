@@ -27,7 +27,10 @@ public class TestJDBC {
 			//接続の確立
 			con = DriverManager.getConnection(url, username, password);
 			System.out.println("接続成功！");
-		} finally {
+		}catch(SQLException e){
+			System.out.println("接続失敗");
+			e.printStackTrace();
+		}finally {
 			con.close(); //接続を閉じておく
 		}
 	}
