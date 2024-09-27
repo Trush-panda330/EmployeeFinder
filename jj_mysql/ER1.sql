@@ -3,18 +3,17 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 /* Drop Tables */
 
 DROP TABLE IF EXISTS employee_master;
-DROP TABLE IF EXISTS DepartmentMaster;
+DROP TABLE IF EXISTS department_master;
 
 
 
 
 /* Create Tables */
 
-CREATE TABLE DepartmentMaster
+CREATE TABLE department_master
 (
 	department_id char(3) NOT NULL,
 	department_name varchar(20) NOT NULL,
-	id char(4) NOT NULL,
 	PRIMARY KEY (department_id)
 );
 
@@ -35,10 +34,12 @@ CREATE TABLE employee_master
 
 ALTER TABLE employee_master
 	ADD FOREIGN KEY (department_id)
-	REFERENCES DepartmentMaster (department_id)
+	REFERENCES department_master (department_id)
 	ON UPDATE RESTRICT
 	ON DELETE RESTRICT
 ;
+
+
 /* Insert employee_master Data*/
 insert into employee_master values('0001','佐藤','2015/04/01',0,'100');
 insert into employee_master values('0002','小林','2016/04/01',0,'200');
@@ -49,6 +50,5 @@ insert into employee_master values('0005','元木','2020/04/01',0,'200');
 /* Insert department_master Data*/
 insert into department_master values('100','技術');
 insert into department_master values('200','営業');
-
 
 
