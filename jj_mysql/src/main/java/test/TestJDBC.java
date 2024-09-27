@@ -1,4 +1,4 @@
-package jj_mysql;
+package test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
