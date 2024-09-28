@@ -27,7 +27,7 @@ table, th, td {
 			<th>部署名</th>
 			<th>入社日</th>
 		</tr>
-		<c:forEach var="employee" items="${employeeList}" varStatus="status">
+		<c:forEach var="employeeBean" items="${employeeList}" varStatus="status">
 			<tr>
 				<td><c:out value="${employeeBean.employee_id}" /></td>
 				<td><c:out value="${employeeBean.employee_name}" /></td>
