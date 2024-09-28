@@ -13,7 +13,7 @@ public class EmployeeLogic {
 
 		//社員IDのチェック(数字以外がないか)
 		boolean isNumeric = employee_id.matches("[+-]?\\d*(\\.\\d+)?");
-		if (isNumeric) {
+		if (!isNumeric) {
 			throw new IllegalArgumentException("数字以外が入っています");
 		}
 
