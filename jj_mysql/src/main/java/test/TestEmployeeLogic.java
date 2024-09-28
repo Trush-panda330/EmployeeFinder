@@ -14,7 +14,6 @@ public class TestEmployeeLogic {
 		EmployeeLogic employeeLogic = new EmployeeLogic();
 		
 		/**EmployeeLogic.getEmployeeのテスト*/
-		
 		try {
 			 //
 			EmployeeBean employeeBean = employeeLogic.getEmployee("0001");
@@ -45,6 +44,5 @@ public class TestEmployeeLogic {
 		}catch(SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
 	}
 }
