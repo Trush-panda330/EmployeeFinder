@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncording="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com.jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html;
+ charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,10 +15,10 @@
 	<p>
 		※全社員検索は、<b>all</b>と入れてください。
 	</p>
-	<form action="Shain" method="post">
+	<form action="Employee" method="post">
 		<p>
-			<label for="shain_id">社員ID：</label> <input type="text"
-				name="shain_id" />
+			<label for="employee_id">社員ID：</label> <input type="text"
+				name="employee_id" />
 			<button type="submit">検索する</button>
 		</p>
 	</form>
