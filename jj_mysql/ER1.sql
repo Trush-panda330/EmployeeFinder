@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS department_master;
 CREATE TABLE department_master
 (
 	department_id char(3) NOT NULL,
-	department_name varchar(20) NOT NULL,
+	name varchar(20) NOT NULL,
 	PRIMARY KEY (department_id)
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE employee_master
 	id char(4) NOT NULL,
 	name varchar(10) NOT NULL,
 	enter_date date NOT NULL,
-	retire_flag blob NOT NULL,
+	retire_flag boolean NOT NULL,
 	department_id char(3) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -50,5 +50,6 @@ insert into employee_master values('0005','元木','2020/04/01',0,'200');
 /* Insert department_master Data*/
 insert into department_master values('100','技術');
 insert into department_master values('200','営業');
+
 
 
