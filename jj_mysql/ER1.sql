@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS department_master;
 CREATE TABLE department_master
 (
 	department_id char(3) NOT NULL,
-	name varchar(20) NOT NULL,
+	department_name varchar(20) NOT NULL,
 	PRIMARY KEY (department_id)
 );
 
@@ -39,7 +39,6 @@ ALTER TABLE employee_master
 	ON DELETE RESTRICT
 ;
 
-
 /* Insert employee_master Data*/
 insert into employee_master values('0001','佐藤','2015/04/01',0,'100');
 insert into employee_master values('0002','小林','2016/04/01',0,'200');
@@ -50,6 +49,7 @@ insert into employee_master values('0005','元木','2020/04/01',0,'200');
 /* Insert department_master Data*/
 insert into department_master values('100','技術');
 insert into department_master values('200','営業');
+
 
 
 
