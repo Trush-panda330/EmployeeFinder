@@ -53,7 +53,13 @@ public class Employee extends HttpServlet {
 				employeeList = empLogic.getAllEmployee();
 			}else {
 				EmployeeBean employeeBean = empLogic.getEmployee(employee_id);
-				
+
+				if(employeeBean.getEmployee_id() == null) {
+					//jspへのkeyと値をセット
+					request.setAttribute("error_msg", "社員IDが存在しません");
+					//エラーページへ転送
+					request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+				}
 				employeeList.add(employeeBean);
 			}
 			
